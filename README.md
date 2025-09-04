@@ -1,67 +1,58 @@
-# ConfluxAI
+ConfluxAI
+
 Generate Confluence pages from simple notes using AI
 
-# 🚀 ConfluxAI - AI-powered Confluence Knowledge Assistant
-
-> **From scattered Confluence pages to instant answers, summaries, and structured knowledge.**
-
----
-
-## 💡 Problem
-
-- Every organization’s Confluence is a **mess of pages, PDFs, meeting notes, and documents**.  
-- **Search is slow and keyword-based**, often returning irrelevant results.  
-- Employees waste valuable hours searching instead of working.  
-
----
-
-## ✅ Solution
-
-ConfluxAI is an **AI-powered Knowledge Assistant** trained on your Confluence data that can:
-
-1. **Instant Q&A** → Ask natural language questions and get instant answers with references.  
-   - *“What’s the escalation process for client downtime?”* → AI provides answer + source page.  
-2. **Semantic Search** → Understands meaning, not just keywords.  
-3. **Source Linking** → Always cites the original Confluence page for trust.  
-4. **Summarization Agent** → Turns long documents into key takeaways.  
-5. **Change Alerts** → Sends Slack/Teams updates when pages are modified.  
-6. **Multi-Modal Expansion** →  
-   - Explains **tables/diagrams** in plain English.  
-   - Converts **meeting notes → action items** automatically.  
+- ConfluxAI generates a Confluence page with:  
+- Title + sections  
+- Tables / lists / links  
+- Clean formatting in Confluence storage format  
+- Automatically published in the correct space  
 
 ---
 
 ## ⚙️ Tech Stack
 
-- **Data Ingestion**  
-  - Confluence REST API  
-  - PDF/Text parsers for attachments  
-
-- **Embeddings + Search**  
-  - Vector DB: **FAISS / Pinecone / Weaviate**  
-  - Frameworks: **LangChain**  
-
-- **LLMs**  
-  - OpenAI GPT-4 
-
-- **UI & Integrations**  
-  - Confluence sidebar plugin (iframe)  
-  - Slack/Teams bot integration  
-  - Config dashboard  
+- **Language Model**: GPT-4 (or Claude / Llama 3)  
+- **Backend**: Python (FastAPI / Flask)  
+- **Integration**: Confluence REST API  
+- **Optional UI**:  
+- CLI tool (`confluxai create "title" "notes"`)  
+- Web app (Streamlit / React)  
+- Slack/Teams bot  
 
 ---
 
-### Requirements
+## 🔑 Features
+
+- ✅ Generate Confluence pages from simple prompts  
+- ✅ AI expands notes into structured docs  
+- ✅ Auto-publish via Confluence REST API  
+- ✅ Supports sections, tables, and references  
+- 🔜 Templates (Meeting Notes, Runbooks, Design Docs)  
+- 🔜 Slack/Teams integration  
+
+---
+
+## 📦 Requirements
+
 - Python 3.9+  
 - OpenAI API Key (or HuggingFace model)  
-- Confluence API Token  
+- Confluence API Token + Space Key  
 
-### Setup
+---
+
+## ⚡ Setup
+
 ```bash
-git clone https://github.com/Harithasridhar130/confluxai.git
+# Clone repo
+git clone https://github.com/Harithasridhar1306/confluxai.git
 cd confluxai
+
+# Install dependencies
 pip install -r requirements.txt
 
 # Set environment variables
 export OPENAI_API_KEY=your_openai_key
-export CONFLUENCE_API_TOKEN=your_confluence_token
+export CONFLUENCE_API_TOKEN=your_confluence_api_token
+export CONFLUENCE_BASE_URL=https://yourcompany.atlassian.net/wiki
+export CONFLUENCE_SPACE_KEY=DEVOPS
