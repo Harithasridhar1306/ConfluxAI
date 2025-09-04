@@ -13,13 +13,11 @@ Generate Confluence pages from simple notes using AI
 
 ## ⚙️ Tech Stack
 
-- **Language Model**: GPT-4 (or Claude / Llama 3)  
-- **Backend**: Python (FastAPI / Flask)  
+- **Language Model**: GPT-4 
+- **Backend**: FastAPI   
 - **Integration**: Confluence REST API  
-- **Optional UI**:  
 - CLI tool (`confluxai create "title" "notes"`)  
 - Web app (Streamlit / React)  
-- Slack/Teams bot  
 
 ---
 
@@ -30,7 +28,6 @@ Generate Confluence pages from simple notes using AI
 - ✅ Auto-publish via Confluence REST API  
 - ✅ Supports sections, tables, and references  
 - 🔜 Templates (Meeting Notes, Runbooks, Design Docs)  
-- 🔜 Slack/Teams integration  
 
 ---
 
