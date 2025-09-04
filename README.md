@@ -1,4 +1,8 @@
 
+# ConfluxAI
+
+Generate Confluence pages from simple notes using AI
+
 - ConfluxAI generates a Confluence page with:  
 - Title + sections  
 - Tables / lists / links  
